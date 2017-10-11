@@ -10,36 +10,39 @@ namespace _07.PrimesInGivenRange
     {
         static void Main(string[] args)
         {
-            double num1 = double.Parse(Console.ReadLine());
-            double num2 = double.Parse(Console.ReadLine());
+            int start = int.Parse(Console.ReadLine());
+            int end = int.Parse(Console.ReadLine());
+            List<int> primes = GetPrimes(start, end);
+            Console.WriteLine(string.Join(", ", primes));
+        }
 
-            for (double i = num1; i < num2; i++)
+        static List<int> GetPrimes(int start, int end)
+        {
+            List<int> list = new List<int>();
+            for (int i = start; i <= end; i++)
             {
-                if (IsPrime(num1))
+                if (IsPrime(i))
                 {
-                    Console.WriteLine("True");
+                    list.Add(i);
                 }
             }
-            
-            //else
-            //{
-            //    Console.WriteLine("False");
-            //}
+
+            return list;
         }
-        static bool IsPrime(double number)
+
+        static bool IsPrime(int number)
         {
-            if (number == 1) return false;
-            if (number == 2) return true;
-            if (number % 2 == 0) return false;
+            bool isPrime = true;
 
-            var boundary = (int)Math.Floor(Math.Sqrt(number));
-
-            for (int i = 3; i <= boundary; i += 2)
+            for (int i = 2; i <= Math.Sqrt(number); i++)
             {
-                if (number % i == 0) return false;
+                if (number % i == 0)
+                {
+                    isPrime = false;
+                }
             }
 
-            return true;
+            return isPrime;
         }
     }
 }
