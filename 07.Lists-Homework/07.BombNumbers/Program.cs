@@ -21,34 +21,27 @@ namespace _07.BombNumbers
                 .ToList();
 
             var bomb = nums[0];
-            var bombRange = nums[1];
-            
-            int counter = 0;
+            var bombPower = nums[1];
 
-            //for (int i = 0; i < input.Count; i++)
-            //{
-
-            //    if (bomb == input[i])
-            //    {
-            //        input.RemoveRange(input[i],bombRange);
-            //        //input.Remove(bomb);
-
-
-
-            //    }
-
-            //}
-            foreach (var num in input)
+            for (int i = 0; i < input.Count; i++)
             {
-                if (num==bomb)
+                if (input[i] == bomb)
                 {
-                    input.Remove(bomb);
+                    int left = Math.Max(i - bombPower, 0);
+                    int right = Math.Min(i + bombPower, input.Count - 1);
+
+                    int bombRange = right - left + 1;
+
+                    input.RemoveRange(left, bombRange);
+                    i = 0;
                 }
             }
 
 
 
-            Console.WriteLine(string.Join(" ", input));
+
+
+            Console.WriteLine(string.Join(" ", input.Sum()));
         }
     }
 }

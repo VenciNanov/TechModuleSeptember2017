@@ -10,10 +10,32 @@ namespace _08.MostFrequentNumber
     {
         static void Main(string[] args)
         {
-            int[] input = Console.ReadLine()
-                .Split(' ')
+            List<int> input = Console.ReadLine()
+                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
-                .ToArray();
+                .ToList();
+
+            int[] counter = new int[65536];
+            int current = 0;
+
+            foreach (var num in input)
+            {
+                counter[num]++;
+            }
+
+            int max = counter.Max();
+            
+
+            for (int i = 0; i < input.Count; i++)
+            {
+                if(counter[input[i]]== max)
+                {
+                    Console.WriteLine(input[i]);
+                    return;
+                }
+            }
+
+
 
         }
     }
