@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MatchFullName", "ConsoleApp1\01.MatchFullName.csproj", "{73E040C0-9CFE-4D77-AB18-F3ABC5509ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MatchPhoneNumber", "02.MatchPhoneNumber\02.MatchPhoneNumber.csproj", "{1A8F9FFA-FDE3-43D5-87AF-C44B953AC4F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E040C0-9CFE-4D77-AB18-F3ABC5509ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E040C0-9CFE-4D77-AB18-F3ABC5509ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E040C0-9CFE-4D77-AB18-F3ABC5509ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E040C0-9CFE-4D77-AB18-F3ABC5509ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8F9FFA-FDE3-43D5-87AF-C44B953AC4F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8F9FFA-FDE3-43D5-87AF-C44B953AC4F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8F9FFA-FDE3-43D5-87AF-C44B953AC4F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8F9FFA-FDE3-43D5-87AF-C44B953AC4F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DF24743-09A2-4BDB-82F2-1C85C4B033D3}
+	EndGlobalSection
+EndGlobal
